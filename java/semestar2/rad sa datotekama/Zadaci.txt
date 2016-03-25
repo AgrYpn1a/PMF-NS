@@ -1,0 +1,4 @@
+Neki custom zadaci za rad sa datotekama, by Rastko & Nemanja
+
+#1 Uneti slovo sa tastature. Naci koliko se puta ponavlja to slovo u fajlu.
+#2 Svaku rec u fajlu zameniti brojem i na kraju ispisati koji je proizvod tih brojeva.
