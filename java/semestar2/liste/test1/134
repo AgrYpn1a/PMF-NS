@@ -1,0 +1,156 @@
+class List
+{
+  class ListElement
+  {
+    public int info;
+    public ListElement next;
+
+    public ListElement(int info)
+    {
+      this.info = info;
+      this.next = null;
+    }
+
+    public String toString()
+    {
+      return info + "";
+    }
+  }
+
+  public ListElement head;
+
+  public List()
+  {
+    this.head = null;
+  }
+
+  public void add(int info)
+  {
+    ListElement e = new ListElement(info);
+    e.next = this.head;
+    this.head = e;
+  }
+
+  public List print()
+  {
+    if(this.head == null)
+    {
+      System.out.println("List is empty!");
+      return this;
+    }
+
+    ListElement curr = head;
+    System.out.println();
+    System.out.print("[ ");
+
+    while(curr != null)
+    {
+      System.out.print(curr.info + " ");
+      curr = curr.next;
+    }
+    System.out.print("]");
+    System.out.println();
+    return this;
+  }
+
+  public void clearOdd()
+  {
+    if(this.head == null)
+      return this;
+
+    while(this.head != null && this.head.info%2 != 0)
+      this.head = this.head.next;
+
+    if(this.head == null)
+      return this;
+
+    ListElement curr = this.head;
+    ListElement last = null;
+
+    while(curr.next != null)
+    {
+      last = curr;
+      curr = curr.next;
+      if(curr.info%2 != 0)
+      {
+        last.next = curr.next;
+        curr = last;
+      }
+    }
+    return this;
+  }
+
+  public List clearGreaterThanB(int b)
+  {
+    if(this.head == null)
+      return this;
+
+    while(head != null && head.info > b)
+      head = head.next;
+
+    if(head == null)
+      return this;
+
+    ListElement curr = this.head;
+
+    while(curr.next != null)
+    {
+      ListElement last = curr;
+      curr = curr.next;
+      if(curr.info > b)
+      {
+        last.next = curr.next;
+        curr = last;
+      }
+    }
+    return this;
+  }
+
+  public List reverse()
+  {
+    if(this.head == null || this.head.next == null)
+      return this;
+
+    // postoje bar dva
+    ListElement last = null;
+    ListElement curr = head;
+
+    while(curr != null)
+    {
+      ListElement next = curr.next;
+
+      curr.next = last;
+
+      last = curr;
+      curr = next;
+    }
+    this.head = last;
+    return this;
+  }
+
+
+}
+
+class Zadatak1
+{
+  public static void main(String[] args)
+  {
+    List list = new List();
+    testAdd(list);
+    list.print();
+    list.reverse().print().reverse().print();
+    list.clearOdd().print().clearGreaterThanB(3).print();
+  }
+
+
+  // test methods
+  static void testAdd(List l)
+  {
+    for(int i=5; i>=0; i--)
+    {
+      l.add(i);
+    }    
+  }
+}
+
+

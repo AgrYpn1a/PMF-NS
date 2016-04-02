@@ -1,0 +1,87 @@
+html {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	background: url('../images/background.jpg');
+}
+
+footer {
+	bottom: 0px;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	padding: 20px 0;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	border-top: 1px solid #19bee7;
+}
+
+#header {
+	width: 100%;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.3);
+	border-bottom: 1px solid #19bee7;
+	height: 180px;
+	z-index: -1;
+}
+
+#wraper {
+	width: 960px;
+	height: 100%;
+	margin: 0px auto;
+	padding: 0px;
+	padding-top: 40px;
+}
+
+#content {
+	width: 940px;
+	background: #ccc;
+	padding: 10px;
+	margin-top: 140px;
+	min-height: 780px;
+}
+
+nav {
+	z-index: 5;
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#logo {
+	width: 120px;
+	height: 120px;
+	float: left;
+	background: url('../images/logo.png');
+	background-size: contain;
+	margin: 0px;
+	padding: 0px;
+}
+
+ul {
+	float: right;
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	margin-top: 40px;
+}
+
+ul li {
+	display: inline-block;
+	margin-right: 15px;
+}
+
+ul li a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+}
+
+ul li a:hover {
+	color: #19bee7;
+}
