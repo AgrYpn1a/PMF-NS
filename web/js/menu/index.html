@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dinamicki meni</title>
+	<script src="app.js"></script>
+	<style>
+		body {
+			background-color: rgb(39,92,58);
+			font-size: 1.2em;
+		}
+		
+		.menu {
+			position: absolute;
+			top: 10px;
+			left: 0px;
+			right: 0px;
+			background-color: rgb(206,55,70);
+			color: white;
+			padding: 10px 0px;
+		}
+		
+		.menu a:visited, .menu a {
+			color: white;
+			text-decoration: none;
+		}
+		
+		.menu-item {
+			position: relative;
+			padding: 3px 7px;
+			cursor: pointer;
+		}
+		
+		.menu-item:hover {
+			background-color: rgb(224,131,140);
+		}
+		
+		.submenu {
+			display: none;
+			position: absolute;
+			left: 0px;
+			top: 25px;
+			background-color: rgb(206,55,70);
+			border: solid;
+			border-color: white;
+			width: 120%;
+		}
+	</style>
+</head>
+
+<body onload="init()">
+	<div class="menu">
+		<a href="#"><span class="menu-item">Prva stavka</span></a>
+		<span class="menu-item">
+			Druga stavka
+			<span class="submenu">
+				<a href="#"><div class="menu-item">Podstavka 2.1</div></a>
+				<a href="#"><div class="menu-item">Podstavka 2.2</div></a>
+				<a href="#"><div class="menu-item">Podstavka 2.3</div></a>
+			</span>
+		</span>
+		<span class="menu-item">
+			Treca stavka
+			<span class="submenu">
+				<a href="#"><div class="menu-item">Podstavka 3.1</div></a>
+				<a href="#"><div class="menu-item">Podstavka 3.2</div></a>
+				<a href="#"><div class="menu-item">Podstavka 3.3</div></a>
+				<a href="#"><div class="menu-item">Podstavka 3.4</div></a>
+			</span>
+		</span>
+	</div>
+</body>
+
+</html>

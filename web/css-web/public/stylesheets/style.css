@@ -8,6 +8,12 @@ body {
 	background: url('../images/background.jpg');
 }
 
+h1 {
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 15px;
+}
+
 footer {
 	bottom: 0px;
 	font-weight: bold;
@@ -17,6 +23,7 @@ footer {
 	width: 100%;
 	background: rgba(0, 0, 0, 0.8);
 	border-top: 1px solid #19bee7;
+	z-index: 1;
 }
 
 #header {
@@ -34,18 +41,19 @@ footer {
 	margin: 0px auto;
 	padding: 0px;
 	padding-top: 40px;
+	z-index: -6;
 }
 
 #content {
+	position: relative;
 	width: 940px;
-	background: #ccc;
+	background: rgba(0, 0, 0, 0.6);
 	padding: 10px;
-	margin-top: 140px;
-	min-height: 780px;
+	margin-top: 141px;
+	min-height: 705px;
 }
 
 nav {
-	z-index: 5;
 	padding: 0px;
 	margin: 0px;
 	width: 100%;
@@ -72,6 +80,7 @@ ul {
 }
 
 ul li {
+	position: relative;
 	display: inline-block;
 	margin-right: 15px;
 }
@@ -84,4 +93,47 @@ ul li a {
 
 ul li a:hover {
 	color: #19bee7;
+}
+
+.section {
+	position: relative;
+	float: left;
+	width: 280px;
+	min-height: 240px;
+	padding: 4px 10px;
+	margin: 0px 6px;
+	background: #fff;
+	text-align: justify;
+}
+
+#HomeHeader {
+	color: #fff;
+}
+
+
+
+/* This code will handle expandable menu */
+li.explore:hover + #explore-expand {
+	height: 200px;
+	background-color: red;
+}
+
+#explore-expand {
+	position: relative;
+	width: inherit;
+	height: 20px;
+	top: -20px;
+}
+
+#explore-expand:hover + #explore-content {
+	display: block;
+}
+
+#explore-content {
+	background: #fff;
+	position: absolute;
+	width: 100px;
+	z-index: 10;
+	height: 100px;
+	display: none;
 }
