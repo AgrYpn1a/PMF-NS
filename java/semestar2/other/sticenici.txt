@@ -1,0 +1,7 @@
+Marija Marko 6 1
+Marija Marko 7 1
+Marija Ana 8 0
+Tijana Marija 5 0
+Ana Marija 5 0
+Ana Tijana 4 0
+Ana Nikola 4 1

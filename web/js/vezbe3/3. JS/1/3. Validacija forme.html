@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Korisnicko ime</title>
+<script>
+
+function proveraimena()
+{ return (document.form1.ime.value.length>=6 && 
+          document.form1.ime.value.length<=10) }
+
+function istesifre()
+{ return (document.form1.sifra.value==document.form1.sifra2.value) }
+
+function proverasifre()
+{ var i,malo=false,veliko=false,cifra=false;
+  var s=document.form1.sifra.value;
+  for (i=0; i<s.length;i++){
+     if (s.charAt(i)>='0' && s.charAt(i)<='9') cifra=true
+     else if (s.charAt(i)>='A' && s.charAt(i)<='Z') veliko=true
+     else if (s.charAt(i)>='a' && s.charAt(i)<='z') malo=true;
+  }   
+  return malo && veliko && cifra;
+}
+
+function provera()
+{ 
+  if (!proveraimena())  {
+       alert ("duzina imena treba da je izmedju 6 i 10 znakova"); 
+       return false;}
+  else if (!istesifre()) { 
+       alert ("nisu iste sifre"); 
+       return false;}
+  else if (!proverasifre()) { 
+       alert("sifra mora imati makar jedan mali i veliki znak i cifru");
+       return false;}
+  else { alert ("Hvala na registraciji"); return true } 
+  }
+
+</script>
+</head>
+<body>
+<form name="form1" action="ispis.html" onsubmit="return provera()">
+  <p>Korisnicko ime: <input type="text" name="ime" size="20"> </p>
+  <p>Sifra:  <input type="password" name="sifra" size="20"> </p>
+  <p>Potvrdi sifru: <input type="password" name="sifra2" size="20"> </p>
+  <p><input type="submit" value="Submit" name="B1">
+     <input type="reset" value="Reset" name="B2"> </p>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

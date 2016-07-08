@@ -1,0 +1,23 @@
+body {
+	background-color: rgb(137,98,117);
+	color: rgb(238,235,226);
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+a div {
+	display: inline-block;
+	padding: 10px;
+	margin: 0px 5px;
+	background-color: rgb(224,191,198);
+	color: black;
+	min-width: 100px;
+	text-align: center;
+}
+
+a:hover div {
+	background-color: rgb(238,235,226);
+}
+
+a:link, a:visited {
+	color: white;
+}

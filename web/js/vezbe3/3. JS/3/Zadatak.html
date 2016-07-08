@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Design</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="scripts/app.js"></script>
+	<script src="scripts/WikipediaLinkovi.js"></script>
+</head>
+
+<body onload="init()">
+	<nav id="navigacija">
+		<h1>Web Design</h1>
+		
+		<div class="menu">
+			<a href="#" divid="webbrowsers"><span class="menu-item">Web Browsers</span></a>
+			<span class="menu-item">
+				Web Design
+				<span class="submenu">
+					<a href="#" divid="html"><div class="menu-item">HTML</div></a>
+					<a href="#" divid="css"><div class="menu-item">CSS</div></a>
+					<a href="#" divid="js"><div class="menu-item">Java Script</div></a>
+				</span>
+			</span>
+			<a href="#" divid="contact"><span class="menu-item">Contact</span></a>
+		</div>
+	</nav>
+	<section id="main-frame">
+		<div class="page" id="webbrowsers" style="display: block;">
+			<h2>Web Browsers</h2>
+	
+			<table border="1">
+				<tr>
+					<th>Logo</th>
+					<th>Browser name and developer</th>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<img src="images/internet-explorer-logo.gif">
+					</td>
+					<td>
+						Internet Explorer
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Microsoft Corporation
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<img src="images/firefox-logo.gif">
+					</td>
+					<td>
+						Firefox
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Mozilla Corporation
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<img src="images/chrome-logo.gif">
+					</td>
+					<td>
+						Chrome
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Google
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<img src="images/safari-logo.gif">
+					</td>
+					<td>
+						Safari
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Apple Inc.
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<img src="images/opera-logo.gif">
+					</td>
+					<td>
+						Opera
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Opera Software ASA
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="page" id="html">
+			<h2>
+				HTML<br>
+				<i>(Source: <a href="http://en.wikipedia.org/wiki/HTML" onclick="return otvoriLink(this)">Wikipedia</a>)</i>
+			</h2>
+			
+			<p>
+				HyperText Markup Language commonly referred to as HTML is the standard markup language used to create web pages. It is written in the form of HTML elements consisting of tags enclosed in angle brackets (like &lt;html&gt;). HTML tags most commonly come in pairs like <mark>&lt;h1&gt;</mark> and <mark>&lt;/h1&gt;</mark>, although some tags represent empty elements and so are unpaired, for example <mark>&lt;img&gt;</mark>. The first tag in a pair is the start tag, and the second tag is the end tag (they are also called opening tags and closing tags).
+			</p>
+
+			<p>
+				Web browsers can read HTML files and compose them into visible or audible web pages. Browsers do not display the HTML tags and scripts, but use them to interpret the content of the page. HTML describes the structure of a website semantically along with cues for presentation, making it a markup language, rather than a programming language.
+			</p>
+			
+			<p>
+				HTML elements form the building blocks of all websites. HTML allows images and objects to be embedded and can be used to create interactive forms. It provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. It can embed scripts written in languages such as JavaScript which affect the behavior of HTML web pages.
+			</p>
+			
+			<p>
+				Web browsers can also refer to Cascading Style Sheets (CSS) to define the look and layout of text and other material. The World Wide Web Consortium (W3C), maintainer of both the HTML and the CSS standards, encourages the use of CSS over explicit presentational HTML.
+			</p>
+			
+			<h3>W3School page:</h3>
+			<iframe src="http://www.w3schools.com/html/" width="90%" height="300px"></iframe>
+		</div>
+		
+		<div class="page" id="css">
+			<h2>
+				CSS<br>
+				<i>(Source: <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets" onclick="return otvoriLink(this)">Wikipedia</a>)</i>
+			</h2>
+			
+			<p>
+				Cascading Style Sheets (CSS) is a style sheet language used for describing the look and formatting of a document written in a markup language. While most often used to change the style of web pages and user interfaces written in HTML and XHTML, the language can be applied to any kind of XML document, including plain XML, SVG and XUL. Along with HTML and JavaScript, CSS is a cornerstone technology used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile applications.
+			</p>
+
+			<p>
+				CSS is designed primarily to enable the separation of document content from document presentation, including elements such as the layout, colors, and fonts. This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple HTML pages to share formatting by specifying the relevant CSS in a separate .css file, and reduce complexity and repetition in the structural content, such as semantically insignificant tables that were widely used to format pages before consistent CSS rendering was available in all major browsers. CSS makes it possible to separate presentation instructions from the HTML content in a separate file or style section of the HTML file. For each matching HTML element, it provides a list of formatting instructions. For example, a CSS rule might specify that "all heading 1 elements should be bold," leaving pure semantic HTML markup that asserts "this text is a level 1 heading" without formatting code such as a <mark>&lt;bold&gt;</mark> tag indicating how such text should be displayed.
+			</p>
+			
+			<h3>Selectors</h3>
+
+			<p>
+				In CSS, selectors are used to declare which part of the markup a style applies to by matching tags and attributes in the markup itself. Selectors may apply to:	
+				
+				<ol>
+					<li>all elements of a specific type, e.g. the second level headers h2</li>
+					<li>elements specified by attribute, in particular:
+						<ul>
+							<li><b>id</b>: an identifier unique to the document</li>
+							<li><b>class</b>: an identifier that groups multiple elements in a document</li>
+						</ul>
+					</li>
+					<li>elements depending on how they are placed relative to others in the document tree.</li>
+				</ol>
+			</p>
+			
+			<h3>W3School page:</h3>
+			<iframe src="http://www.w3schools.com/css/" width="90%" height="300px"></iframe>
+		</div>
+		
+		<div class="page" id="js">
+			<h2>
+				JavaScript<br>
+				<i>(Source: <a href="http://en.wikipedia.org/wiki/JavaScript" onclick="return otvoriLink(this)">Wikipedia</a>)</i>
+			</h2>
+			
+			<p>
+				JavaScript is a dynamic computer programming language. It is most commonly used as part of web browsers, whose implementations allow client-side scripts to interact with the user, control the browser, communicate asynchronously, and alter the document content that is displayed. It is also used in server-side network programming with runtime environments such as Node.js, game development and the creation of desktop and mobile applications. With the rise of the single-page web app and JavaScript-heavy sites, it is increasingly being used as a compile target for source-to-source compilers from both dynamic languages and static languages. In particular, Emscripten and highly optimised JIT compilers, in tandem with asm.js which is friendly to AOT compilers like OdinMonkey, have enabled C and C++ programs to be compiled into JavaScript and execute at near-native speeds, making JavaScript be considered the "assembly language of the web", according to its creator and others.
+			</p>
+			
+			<p>
+				JavaScript is classified as a prototype-based scripting language with dynamic typing and first-class functions. This mix of features makes it a multi-paradigm language, supporting object-oriented, imperative, and functional programming styles.
+			</p>
+				
+			<h3>Example of JavaScript code:</h3>
+
+			<pre>
+			function factorial(n) {
+				if (n === 0) {
+					return 1;
+				}
+				return n * factorial(n - 1);
+			}
+			</pre>
+			
+			<h3>W3School page:</h3>
+			<iframe src="http://www.w3schools.com/js/" width="90%" height="300px"></iframe>
+		</div>
+		
+		<div class="page" id="contact">
+			<h2>Contact</h2>
+			<form>
+				<fieldset>
+					<legend>Personal information</legend>
+					<p>
+						Gender: <br>
+						<input type="radio" name="gender" value="male" checked> Male <br>
+						<input type="radio" name="gender" value="female"> Female
+					</p>
+					<p>
+						Birthdate: <input type="date">
+					</p>
+				</fieldset>
+
+				<br>
+				
+				<fieldset>
+					<legend>Impressions</legend>
+					<p>
+						How much did you like the content of this website? 
+						<select>
+							<option value="0">I didn't like it</option>
+							<option value="1">I don't have opinion</option>
+							<option value="2">I liked it</option>
+						</select>
+					</p>
+					<p>
+						What background color is most suitable for this website? <input type="color" name="background" value="#8b36e9">
+					</p>
+					<p>
+						How many times did you visit this website (approximately)? <input type="number" name="visits" value="1">
+					</p>
+				</fieldset>
+				
+				<br>
+				
+				<fieldset>
+					<legend>Contact form</legend>
+					
+					<p>
+						The purpose of contacting:
+						<br><input type="checkbox" value="problem"> I want to report a problem
+						<br><input type="checkbox" value="suggestion"> I want to make a suggestion
+						<br><input type="checkbox" value="commend"> I want to commend this website
+					</p>
+					
+					<p>
+						Comment:
+						<br><textarea rows="5" cols="60">Insert your comment here.</textarea>
+					</p>
+					
+				</fieldset>
+				
+				<br><input type="submit" value="Posalji">
+			</form>
+		</div>
+		
+	</section>
+	
+	
+	<aside id="wikipedia">
+		<div id="wikipedia-message">
+			Place for Wikipedia page.
+		</div>
+		<iframe id="wikipedia-iframe" style="display:none;"></iframe>
+	</aside>
+</body>
+
+</html>
