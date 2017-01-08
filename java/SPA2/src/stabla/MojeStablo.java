@@ -3,6 +3,7 @@ package stabla;
 import org.svetovid.Svetovid;
 import sun.misc.OSEnvironment;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -46,7 +47,6 @@ class BinaryTree {
 		final Node fndRight = findNode(node.right, o);
 
 		return fndLeft == null ? fndRight : fndLeft;
-
 	}
 
 	// methods
@@ -164,6 +164,40 @@ class BinaryTree {
 		return false;
 	}
 
+	public List<Osoba> sveSaIstomPlatom() {
+		// hash mapa osoba sa istom platom
+		final HashMap<Integer, List<Osoba>> map = new HashMap<>();
+		final List<Osoba> result = new LinkedList<>();
+
+		sveSaIstomPlatom(root, map);
+
+		// dodaj u konacnu listu, sve liste duze od 1
+		for(final HashMap.Entry<Integer, List<Osoba>> entry : map.entrySet()) {
+			System.out.println("map itter");
+			if(entry.getValue().size() > 1)
+				result.addAll(entry.getValue());
+		}
+
+		return result;
+	}
+
+	protected static void sveSaIstomPlatom(final Node node, final HashMap<Integer, List<Osoba>> map) {
+		if(node == null) return;
+
+		addToMap(node.info, map);
+		sveSaIstomPlatom(node.left, map);
+		sveSaIstomPlatom(node.right, map);
+	}
+
+	protected static void addToMap(final Osoba o, final HashMap<Integer, List<Osoba>> map) {
+		if(map.get(o.getPlata()) != null) {
+			map.get(o.getPlata()).add(o);
+		} else {
+			map.put(o.getPlata(), new LinkedList<>());
+			map.get(o.getPlata()).add(o);
+		}
+	}
+
 }
 
 // Glavna klasa
@@ -194,6 +228,12 @@ public class MojeStablo {
 		final List<Osoba> podredjeni = stablo.sviPodredjeni(new Osoba("Strahinja", "Strahimirovic", 21976));
 		for(final Osoba o : podredjeni)
 			System.out.print(o + " ");
+
+		System.out.println();
+		System.out.println("Sve osobe koje imaju istu platu kao makar jos jedna osoba: ");
+		final List<Osoba> osobeSaIstomPlatom = stablo.sveSaIstomPlatom();
+		for(final Osoba o : osobeSaIstomPlatom)
+			System.out.print(o + ", ");
 
 	}
 }
